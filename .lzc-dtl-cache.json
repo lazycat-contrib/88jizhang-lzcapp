@@ -1,0 +1,43 @@
+{
+  "name": "发发记账",
+  "package": "cloud.lazycat.app.88jizhang",
+  "description": "一个免费的在线记账程序",
+  "homepage": "https://www.88jizhang.com",
+  "author": "88jizhang",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "88jizhang",
+  "version": "1.0.8",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "88jizhang_5188_5188": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    },
+    "88jizhang_5199_5199": {
+      "use": false
+    }
+  },
+  "image_crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com_88jizhang_88jizhang_v1.0.8": {
+    "originalImage": "crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com/88jizhang/88jizhang:v1.0.8",
+    "pushTarget": "none"
+  },
+  "88jizhang_volume_/app/jizhang.db_action": "emptyDir",
+  "88jizhang_volume_/app/jizhang.db_location": "app_data",
+  "88jizhang_volume_/app/setting.json_action": "emptyDir",
+  "88jizhang_volume_/app/setting.json_location": "app_data",
+  "88jizhang_volume_/app/https_action": "emptyDir",
+  "88jizhang_volume_/app/https_location": "app_data",
+  "88jizhang_volume_/app/zhangbenpicture/zhangdan-picture_action": "emptyDir",
+  "88jizhang_volume_/app/zhangbenpicture/zhangdan-picture_location": "app_data"
+}

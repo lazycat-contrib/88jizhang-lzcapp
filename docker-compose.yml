@@ -1,0 +1,14 @@
+services:
+    88jizhang:
+        container_name: 88jizhang
+        ports:
+            - 5188:5188
+            - 5199:5199
+        volumes:
+            - /home/zhangsan/docker/88jizhang/jizhang.db:/app/jizhang.db
+            - /home/zhangsan/docker/88jizhang/setting.json:/app/setting.json
+            - /home/zhangsan/docker/88jizhang/https:/app/https
+            - /home/zhangsan/docker/88jizhang/zhangdanimages:/app/zhangbenpicture/zhangdan-picture
+        environment:
+            - TZ=Asia/Shanghai
+        image: crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com/88jizhang/88jizhang:v1.0.8

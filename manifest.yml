@@ -1,0 +1,32 @@
+lzc-sdk-version: "0.1"
+name: 发发记账
+package: cloud.lazycat.app.ffjizhang
+version: 1.0.8
+description: 一个免费的在线记账程序
+homepage: https://www.88jizhang.com
+author: 88jizhang
+application:
+  subdomain: 88jizhang
+  background_task: true
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  public_path:
+    - /
+  routes:
+    - /=http://88jizhang:5188/
+services:
+  88jizhang:
+    image: crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com/88jizhang/88jizhang:v1.0.8
+    environment:
+      - TZ=Asia/Shanghai
+    binds:
+      - /lzcapp/var/data:/app/data
+      - /lzcapp/var/zhangdan-picture:/app/zhangbenpicture/zhangdan-picture
+    setup_script: |
+        if [ ! -f /app/data/jizhang.db ];then
+          cp -f /lzcapp/pkg/content/jizhang.db /app/data/jizhang.db
+        fi
+        rm -rf /app/jizhang.db
+        ln -s /app/data/jizhang.db /app/jizhang.db
