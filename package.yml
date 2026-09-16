@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.ffjizhang
+version: 1.0.8
+name: 发发记账
+description: "一个免费的在线记账程序"
+min_os_version: "1.5.0"
+homepage: https://www.88jizhang.com
+author: 88jizhang
+locales:
+  zh:
+    description: "一个免费的在线记账程序"
+    name: 发发记账
+  en:
+    description: "A free online bookkeeping app"
+    name: FaFa Bookkeeping
