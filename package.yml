@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.ffjizhang
-version: 1.0.8
+version: 1.0.13
 name: 发发记账
 description: "一个免费的在线记账程序"
 min_os_version: "1.5.0"

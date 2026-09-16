@@ -7,11 +7,10 @@ application:
   upstreams:
     - location: /
       backend: http://88jizhang:5188/
-
 services:
   88jizhang:
-    # upstream: crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com/88jizhang/88jizhang:v1.0.8
-    image: crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com/88jizhang/88jizhang:v1.0.8
+    # upstream: crpi-btxs8xhps2iaw65e.cn-hangzhou.personal.cr.aliyuncs.com/88jizhang/88jizhang:v1.0.13
+    image: registry.lazycat.cloud/czyt/88jizhang/88jizhang:b89bca69a9ff28c0
     environment:
       - TZ=Asia/Shanghai
     binds:
